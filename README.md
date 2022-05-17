@@ -1,8 +1,8 @@
-# 1.安装对应的docker https://docs.docker.com/engine/install
+#   1.安装对应的docker https://docs.docker.com/engine/install
 
-# 2.进入docker_test
+#   2.进入docker_test
 
-# 3.终端输入docker build -t 打包名字 .
+#   3.终端输入docker build -t 打包名字 .
 
 ![image](https://user-images.githubusercontent.com/102155088/168894361-fb6bd3cf-dc35-41dd-926e-fb59013853f4.png)
 
