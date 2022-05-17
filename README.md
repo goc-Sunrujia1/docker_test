@@ -1,6 +1,9 @@
 1.安装对应的docker https://docs.docker.com/engine/install
+
 2.进入docker_test
+
 3.终端输入docker build -t 打包名字 .
+
 ![image](https://user-images.githubusercontent.com/102155088/168894361-fb6bd3cf-dc35-41dd-926e-fb59013853f4.png)
 #如果你是用虚拟机记得把本地的翻墙代理关掉，不关掉的话npm install可能会失败
 4.docker run -d -p 4000:3000 名字
