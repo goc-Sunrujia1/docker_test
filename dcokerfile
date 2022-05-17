@@ -1,0 +1,10 @@
+//从dockerhub拿取node:alpine这个镜像
+FROM node:alpine
+//工作的地方
+WORKDIR /code
+//将代码添加到code文件
+ADD . /code
+//安装依赖包
+RUN npm install
+//运行js
+CMD node index.js
