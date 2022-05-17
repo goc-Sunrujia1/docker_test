@@ -1,11 +1,8 @@
-### 1.安装对应的docker https://docs.docker.com/engine/install
-
+### 1.安装对应的docker
+> https://docs.docker.com/engine/install
 ### 2.进入docker_test
-
 ### 3.终端输入docker build -t 打包名字 .
-
 ![image](https://user-images.githubusercontent.com/102155088/168894361-fb6bd3cf-dc35-41dd-926e-fb59013853f4.png)
-
 - 如果你是用虚拟机记得把本地的翻墙代理关掉，不关掉的话npm install可能会失败
 > sudo docker build -t test112 .
 ### 4.docker run -d -p 4000:3000 名字
@@ -14,7 +11,7 @@
 - -p:开启映射，4000:3000：容器中的 3000 端口会对应到本地的 4000 端口
 > Linux的话 ip a可以查看地址，地址:本地端口号就可以访问到了
 ### 5.docker login  
-- 登录到docker，你需要有一个docker账号https://hub.docker.com/,然后去开一个私有的库 
+- 登录到docker，你需要有一个docker账号开个库https://hub.docker.com/
 - 可以直接把身份写在一行命令行而不用手动输入，配置一个什么文件啥的没看懂https://docs.docker.com/engine/reference/commandline/login/#provide-a-password-using-stdin
 ### 6. docker tag  打包名字  docker用户名/docker仓库:自定义tag名称
 - 改可以推到仓库的格式，自定义tag名称也可以不写，不写自动会在后面加latest 
