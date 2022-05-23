@@ -44,8 +44,8 @@ jobs:
           port: 22
           script: |
             sudo docker images
+            sudo docker pull sunjia1/test1:${{ secrets.MINOR }}
             sudo docker stop $(sudo docker ps -aq)
-            sudo docker pull sunjia1/test1
             sudo docker run -dp 3000:3000  sunjia1/test1:${{ secrets.MINOR }}
             sudo docker ps
             
