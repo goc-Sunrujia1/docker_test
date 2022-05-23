@@ -51,12 +51,12 @@ jobs:
             
       - name: Autoincrement a new patch version
         run: |
-          echo "NEW_PATCH_VERSION=$((${{ env.PATCH_VERSION }}+1))" >> $GITHUB_ENV
+          echo "NEW_PATCH_VERSION=$((${{ env.MINOR }}+1))" >> $GITHUB_ENV
           
       - name: Update patch version
         uses: hmanzur/actions-set-secret@v2.0.0
         with:
-          name: 'PATCH_VERSION'
+          name: 'MINOR'
           value: ${{ env.NEW_PATCH_VERSION }}
           repository: goc-Sunrujia1/docker_test
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
