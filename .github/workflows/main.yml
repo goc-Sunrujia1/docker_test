@@ -33,7 +33,7 @@ jobs:
           context: .
           file: dockerfile
           push: true
-          tags: sunjia1/test1:&{{  steps.meta.outputs.tags }}
+          tags: sunjia1/test1:${{ secrets.MINOR }}
           
       - name: Exexute command
         uses: appleboy/ssh-action@master
@@ -46,6 +46,14 @@ jobs:
             sudo docker images
             sudo docker stop $(sudo docker ps -aq)
             sudo docker pull sunjia1/test1
-            sudo docker run -dp 3000:3000  sunjia1/test1:&{{ steps.meta.outputs.tags }}
+            sudo docker run -dp 3000:3000  sunjia1/test1:${{ secrets.MINOR }}
             sudo docker ps
+            
+      - name: Update Minor version
+        uses: hmanzur/actions-set-secret@v2.0.0
+        with:
+          name: 'MINOR'
+          value: $((${{ secrets.MINOR }}+1))
+          repository: goc-Sunrujia1/docker_test
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}   
         
