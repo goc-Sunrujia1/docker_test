@@ -3,10 +3,10 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ featre/login ]
     tags: [v*]
   pull_request:
-    branches: [ master ]
+    branches: [ featre/login ]
    
 
   workflow_dispatch:
